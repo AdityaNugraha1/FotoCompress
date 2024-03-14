@@ -1,0 +1,13 @@
+runtime: nodejs14
+
+handlers:
+  - url: /.*
+    script: auto
+    secure: always
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 10
+  min_idle_instances: 1
+  max_idle_instances: 5
+  max_pending_latency: 5s
